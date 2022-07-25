@@ -2,3 +2,7 @@ node_modules
 dist
 .env
 coverage
+yarn.lock
+yarn.error.log
+*.prod.json
+
