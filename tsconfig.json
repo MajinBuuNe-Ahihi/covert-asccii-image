@@ -9,12 +9,15 @@
     "strict": true,                           /* Enable all strict type-checking options. */
     "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */   
     "paths": {
-      "@src/math/*":["./src/math/*.ts"]
+      "@src/math/*":["./src/math/*.ts"],
+      "@src/route":["./src/routes/index.ts"],
+      "@src/controllers":["./src/controllers/index.ts"],
+      "@src/config":["./src/config/index.ts"]
     },                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     "esModuleInterop": true,              /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
     "experimentalDecorators": true,        /* Enables experimental support for ES7 decorators. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules","jest.config.js"]
 }

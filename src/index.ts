@@ -8,16 +8,17 @@ import express, {
   ErrorRequestHandler,
 } from 'express';
 import createError from 'http-errors';
+import {configPath} from '@src/config'
+import {InitRouter} from '@src/route'
 
 dotenv.config();
 
 const app: Application = express();
 
-const port = process.env.PORT && Number(process.env.PORT);
+const port = process.env.PORT && Number(process.env.PORT) || 3000;
 
-app.get('/', (req: Request, res: Response) => {
-  return res.status(200).json('oke ');
-});
+configPath(app);
+InitRouter(app);
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   next(new createError.NotFound());
