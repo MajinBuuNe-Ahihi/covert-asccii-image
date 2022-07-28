@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="./styles/main.css" />
 </head>
 <body>
-    <canvas id="canvas">
-    </canvas>
+   <div class="container">
+    <form action="">
+    <label for="image">
+        <canvas id="canvas" data-image = "">
+        </canvas>
+    </label>
+    <input type="file" class="upload-image" name="image" accept="image/*">
+    </form>
+    <div class="controls">
+        <label for="resolution" class="resolutionLabel">5px</label>
+        <input type="range" min="1" max="20" value="5" id="resolution" name="resolution"></input>
+    </div>
+   </div>
+    <script src="./js/main.js"> </script>
 </body>
 </html>
